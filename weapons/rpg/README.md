@@ -14,7 +14,7 @@ All damage data was measured with the rocket exploding at the player's origin ex
 * Average: ~62
 
 #### Damage frequency
-![Chart: Frequency of RPG Damage at Player Origin](graphics/damage_frequency.svg)
+![Chart: Frequency of RPG Damage at Player Origin](graphics/damage_frequency.png)
 
 ### Misc
 * Projectile Speed: 900
