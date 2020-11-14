@@ -14,4 +14,4 @@ All damage data was measured with the exploding at a crouched player's origin ex
 * Average: ~80
 
 ### Misc
-* Damage radius: ~120 units
+* Damage radius: ~120 units (~136 from the origin)

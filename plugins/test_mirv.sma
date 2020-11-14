@@ -1,29 +1,30 @@
 #include <amxmodx>
 #include <engine>
 
-#define PLUGIN "Test Grenades"
+#define PLUGIN "Test Mirvs"
 #define VERSION "0.1"
 #define AUTHOR "squeek."
 
-#define TEST_GREN_TARGET_CVAR "test_gren_target"
-#define TEST_GREN_RADIUS_CVAR "test_gren_radius"
+#define TEST_MIRV_TARGET_CVAR "test_mirv_target"
+#define TEST_MIRV_RADIUS_CVAR "test_mirv_radius"
 
 public plugin_init()
 {
 	register_plugin(PLUGIN, VERSION, AUTHOR)
-	register_think("tf_weapon_normalgrenade", "gren_think")
+	register_think("tf_weapon_mirvgrenade", "gren_think")
+	register_think("tf_weapon_mirvbomblet", "gren_think")
 
-	register_cvar(TEST_GREN_TARGET_CVAR, "1")
-	register_cvar(TEST_GREN_RADIUS_CVAR, "0")
+	register_cvar(TEST_MIRV_TARGET_CVAR, "1")
+	register_cvar(TEST_MIRV_RADIUS_CVAR, "0")
 }
 
 // teleport grenades to the origin of the target
 public gren_think(gren_id)
 {
-	if (get_cvar_num(TEST_GREN_TARGET_CVAR) < 0)
+	if (get_cvar_num(TEST_MIRV_TARGET_CVAR) < 0)
 		return
 
-	teleport_ent_to_ent(gren_id, get_cvar_num(TEST_GREN_TARGET_CVAR))
+	teleport_ent_to_ent(gren_id, get_cvar_num(TEST_MIRV_TARGET_CVAR))
 	static Float:zero_velocity[3] = {0.0}
 	entity_set_vector(gren_id, EV_VEC_velocity, zero_velocity)
 }
@@ -36,6 +37,6 @@ public teleport_ent_to_ent(ent_id, target_id)
 
 	static Float:target_origin[3]
 	entity_get_vector(target_id, EV_VEC_origin, target_origin)
-	target_origin[0] = target_origin[0] + get_cvar_num(TEST_GREN_RADIUS_CVAR)
+	target_origin[0] = target_origin[0] + get_cvar_num(TEST_MIRV_RADIUS_CVAR)
 	entity_set_vector(ent_id, EV_VEC_origin, target_origin)
 }
