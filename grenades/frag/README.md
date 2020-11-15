@@ -10,6 +10,8 @@
 
 ## Damage and radius
 
-* At origin: 162
-* Radius: ~368 from origin (note: not from edge of player hitbox)
+* Damage at the edge of a player's hitbox: ~145
+* Damage at origin of a player: 162 (note: in practice, this damage isn't likely to be possible)
+* Self-damage from handhelding: ~120
+* Radius: ~368 from origin of a player, or ~352 from edge of a player's hitbox
 * Falloff: 0 damage at edge of radius

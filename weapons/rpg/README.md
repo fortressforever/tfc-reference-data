@@ -17,8 +17,8 @@ All damage data was measured with the rocket exploding at the player's origin ex
 ![Chart: Frequency of RPG Damage at Player Origin](graphics/damage_frequency.png)
 
 #### Radius
-* Radius: ~125 from origin max (note: not from edge of player hitbox)
-* Radius also seems to vary based on the randomness of the damage, and seems to do about half damage at the edge of its radius
+* Max Radius: ~109 from edge of a player's hitbox (~125 from origin of a player)
+  - Radius also seems to vary based on the randomness of the damage, and seems to do about half damage at the edge of its radius
 
 ### Misc
 * Projectile Speed: 900
